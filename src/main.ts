@@ -54,6 +54,10 @@ function renderItem(todo: TodoItem): HTMLLIElement {
   delBtn.textContent = '削除';
   delBtn.className = 'delete-btn';
   delBtn.addEventListener('click', () => {
+    // Todo削除時の確認ダイアログ
+    const confirmed = window.confirm(`「${todo.title}」を削除しますか？`);
+    if (!confirmed) return;
+    
     deleteTodo(todo.id);
     render();
   });
@@ -83,6 +87,11 @@ function init() {
     e.preventDefault();
     const title = input.value.trim();
     if (!title) return;
+    
+    // Todo登録時の確認ダイアログ
+    const confirmed = window.confirm(`「${title}」を登録しますか？`);
+    if (!confirmed) return;
+    
     createTodo({ title });
     input.value = '';
     render();
