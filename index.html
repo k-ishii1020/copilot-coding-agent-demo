@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todoデモ</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Todo デモ</h1>
+    <form id="todo-form" aria-label="新しいタスクを追加">
+      <label for="todo-input" class="visually-hidden">タスク内容</label>
+      <input id="todo-input" name="title" type="text" placeholder="やること..." autocomplete="off" required />
+      <button type="submit">追加</button>
+    </form>
+    <div class="toolbar" aria-label="表示切替">
+      <button type="button" data-filter="all" class="filter-btn active">すべて</button>
+      <button type="button" data-filter="active" class="filter-btn">未完了</button>
+      <button type="button" data-filter="completed" class="filter-btn">完了</button>
+      <button type="button" id="clear-completed" class="secondary" title="完了済みを一括削除">完了削除</button>
+    </div>
+    <section>
+      <h2 class="visually-hidden">タスクリスト</h2>
+      <ul id="todo-list"></ul>
+    </section>
+    <p id="empty-message" class="empty">まだタスクはありません</p>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
