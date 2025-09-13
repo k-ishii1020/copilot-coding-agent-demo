@@ -1,12 +1,11 @@
-# Todo デモ (GitHub Copilot Coding Agent)
+#  GitHub Copilot Coding Agentのデモ用Todoアプリ 
 
-シンプルなブラウザ向け Todo アプリのデモリポジトリです。以下の要件を満たしています。
+シンプルなTodoアプリのデモ用リポジトリです。以下の要件を満たしています。
 
 - TypeScript + Vite を使用
 - ブラウザの LocalStorage による永続化
 - Vitest によるユニットテスト
 - Dev Container 対応 (Node 20 ベース / 自動依存インストール)
-- すべて日本語ドキュメント
 
 ## 機能概要
 
@@ -40,10 +39,10 @@ npm install
 ## 開発サーバ起動
 
 ```bash
-npm run dev
+npm run preview -- --port 5174
 ```
 
-ブラウザで http://localhost:5173 を開きます。
+ブラウザで http://localhost:5174 を開きます。
 
 ## ビルド
 
@@ -81,14 +80,7 @@ npm run test:watch
 	└─ devcontainer.json
 ```
 
-## 今後の改善例 (任意)
 
-- フィルタ (すべて / 未完了 / 完了)
-- タイトル編集機能
-- DnD による並び替え
-- E2E テスト（Playwright 等）
+## その他
 
-## ライセンス
-
-デモ用途。必要に応じて LICENSE ファイルを追加してください。
-
+デモ用途でVibeCodingしたものです。中身については一切担保できません。
